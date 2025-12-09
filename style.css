@@ -7,6 +7,16 @@
     font-display: swap;
 }
 
+:root{
+    --text: #333333;
+    --btn:#0077FF;
+    --btn-hover: #0064D6;
+    --hero-bg: #FAFAFA;
+    --footer-bg:#F2F2F2;
+    --btn-text: #FFFFFF;
+
+}
+
 body{
     font-family: Poppins , system-ui;
 }
