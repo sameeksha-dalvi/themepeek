@@ -21,4 +21,41 @@
 
 body{
     font-family: Poppins , system-ui;
+    margin-top: 0;
+    color: var(--text);
+}
+
+.header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--header-border);
+
+}
+
+#logo-txt{
+    letter-spacing: 2px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+#about{
+    margin-right: 20px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+#about > a{
+    text-decoration: none;
+}
+
+
+#about > a:visited{
+    color: var(--text);
+}
+
+#about > a:hover{
+    color: var(--btn-hover);
 }
