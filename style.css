@@ -17,6 +17,7 @@
     --header-border: #E5E5E5;
     --footer-border: #E5E7EB;
     --sub-text: #64748B;
+    --border-textarea: #e5e7eb;
 
 }
 
@@ -100,12 +101,13 @@ textarea {
     font-size: 16px;
     font-family: Poppins, system-ui;
     color: var(--text);
-    border: 2px solid var(--text);
+    border: 1px solid var(--border-textarea);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 textarea:focus {
-    border-color: var(--btn-hover);
-    border-width: 2px;
+    border-color: var(--btn);
+    box-shadow: 0 0 0 3px rgba(0, 119, 255, 0.15);
     outline: none;
 }
 
