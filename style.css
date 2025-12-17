@@ -120,10 +120,18 @@ textarea:focus {
     font-weight: 600;
     letter-spacing: 1px;
     border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 119, 255, 0.25);
 }
 
 .btn:hover {
     background-color: var(--btn-hover);
+    box-shadow: 0 6px 16px rgba(0, 119, 255, 0.35);
+    transform: translateY(-1px);
+}
+
+.btn:active {
+  box-shadow: 0 2px 4px rgba(0, 119, 255, 0.2);
+  transform: translateY(0);
 }
 
 .prompt-input {
