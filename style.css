@@ -130,8 +130,8 @@ textarea:focus {
 }
 
 .btn:active {
-  box-shadow: 0 2px 4px rgba(0, 119, 255, 0.2);
-  transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 119, 255, 0.2);
+    transform: translateY(0);
 }
 
 .prompt-input {
@@ -143,10 +143,34 @@ textarea:focus {
 
 @media (max-width: 600px) {
 
-    .prompt-section{
+    .prompt-section {
         display: flex;
         flex-direction: column;
         gap: 40px;
     }
+
+    #logo-txt {
+        font-size: 18px;
+    }
+
+    #about,.prompt-heading {
+        font-size: 12px;
+    }
+
+    #sub-heading {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    textarea{
+        width: 300px;
+        height: 200px;
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+
 
 }
