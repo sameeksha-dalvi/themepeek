@@ -11,7 +11,7 @@ copyPromptBtn.addEventListener('click', function () {
     copyPromptBtn.textContent = "Copied ✓";
 
     setTimeout(() => {
-        copyPromptBtn.textContent = "Copy prompt";
+        copyPromptBtn.textContent = "Copy Prompt";
     }, 2000);
 
 });
