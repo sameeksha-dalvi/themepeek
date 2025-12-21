@@ -141,6 +141,31 @@ textarea:focus {
     gap: 20px;
 }
 
+.preview-section{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#sub-text{
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+#preview-screen{
+    margin-top: 20px;
+    width: 900px;
+    height: 600px;
+    border: 1px solid var(--footer-border);
+    border-radius: 20px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0);
+}
+
 @media (max-width: 600px) {
 
     .prompt-section {
