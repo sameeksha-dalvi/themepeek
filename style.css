@@ -205,6 +205,7 @@ textarea:focus {
     color: var(--sub-text);
     font-size: 16px;
     padding-bottom: 70px;
+    text-align: center;
 }
 
 footer{
@@ -235,17 +236,24 @@ footer a:hover {
         gap: 40px;
     }
 
-    #logo-txt {
+    #logo-txt{
         font-size: 18px;
     }
 
-    #about,.prompt-heading {
+    #about,.prompt-heading,.use-cases {
         font-size: 12px;
     }
 
-    #sub-heading {
+    #sub-heading,#about-heading,#about-sub-heading,#sub-text {
         font-size: 20px;
         text-align: center;
+    }
+
+    .use-cases{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     textarea{
