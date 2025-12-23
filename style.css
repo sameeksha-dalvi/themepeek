@@ -19,8 +19,17 @@
     --sub-text: #64748B;
     --border-textarea: #e5e7eb;
     --about: #1E293B;
-    --about-text:#475569;
-
+    --about-text: #475569;
+    --preview-background:#FFFFFF;
+    --preview-hero-gradient-start:#E3F2FD;
+    --preview-hero-gradient-end:#90CAF9;
+    --preview-heading:#1E293B;
+    --preview-subtext: #64748B;
+    --preview-primary-btn: #3B82F6;
+    --preview-card-bg:#FFFFFF;
+    --preview-footer-bg: #F2F2F2;
+    --preview-cards-section-bg: #F8FAFC;
+    --preview-cta-bg: #E0F2FE;
 }
 
 body {
@@ -30,7 +39,7 @@ body {
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 .header {
@@ -147,7 +156,7 @@ textarea:focus {
     gap: 20px;
 }
 
-.preview-section{
+.preview-section {
     width: 100%;
     margin-top: 30px;
     display: flex;
@@ -158,13 +167,13 @@ textarea:focus {
     margin-bottom: 30px;
 }
 
-#sub-text{
+#sub-text {
     font-size: 24px;
     letter-spacing: 1px;
     font-weight: 600;
 }
 
-#preview-screen{
+#preview-screen {
     margin-top: 20px;
     width: 900px;
     height: 600px;
@@ -173,7 +182,7 @@ textarea:focus {
     box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0);
 }
 
-.about{
+.about {
     background-color: var(--hero-bg);
     display: flex;
     flex-direction: column;
@@ -183,21 +192,21 @@ textarea:focus {
 
 }
 
-#about-heading{
+#about-heading {
     font-size: 32px;
     font-weight: 600;
     letter-spacing: 1px;
     color: var(--about);
 }
 
-#about-sub-heading{
+#about-sub-heading {
     margin-top: 20px;
     font-size: 20px;
     text-align: center;
     color: var(--about-text);
 }
 
-.use-cases{
+.use-cases {
     margin-top: 30px;
     width: 60%;
     display: flex;
@@ -208,7 +217,7 @@ textarea:focus {
     text-align: center;
 }
 
-footer{
+footer {
     background-color: var(--footer-bg);
     color: var(--sub-text);
     height: 40px;
@@ -220,12 +229,13 @@ footer{
 }
 
 footer a {
-  color: inherit;
-  text-decoration: none;
-  padding-left: 3px;
+    color: inherit;
+    text-decoration: none;
+    padding-left: 3px;
 }
+
 footer a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 @media (max-width: 600px) {
@@ -236,27 +246,32 @@ footer a:hover {
         gap: 40px;
     }
 
-    #logo-txt{
+    #logo-txt {
         font-size: 18px;
     }
 
-    #about,.prompt-heading,.use-cases {
+    #about,
+    .prompt-heading,
+    .use-cases {
         font-size: 12px;
     }
 
-    #sub-heading,#about-heading,#about-sub-heading,#sub-text {
+    #sub-heading,
+    #about-heading,
+    #about-sub-heading,
+    #sub-text {
         font-size: 20px;
         text-align: center;
     }
 
-    .use-cases{
+    .use-cases {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    textarea{
+    textarea {
         width: 300px;
         height: 200px;
         font-size: 14px;
