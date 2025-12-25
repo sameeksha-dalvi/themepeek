@@ -19,10 +19,13 @@ copyPromptBtn.addEventListener('click', function () {
 
 const previewThemeBtn = document.querySelector('#load-theme-btn');
 
-previewThemeBtn.addEventListener('click',function(){
+previewThemeBtn.addEventListener('click', function () {
 
-    const themeText = document.querySelector('#theme-txt');
+    const themeText = document.querySelector('#theme-txt').value.trim();
 
+    const eachLine = themeText.split('\n');
 
-    console.log(themeText.value);
+    const trimEachLine = eachLine.map(function (line) {
+        return line.trim();
+    });
 });
