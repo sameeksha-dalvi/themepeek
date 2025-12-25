@@ -30,7 +30,7 @@
     --preview-footer-bg: #F2F2F2;
     --preview-cards-section-bg: #F8FAFC;
     --preview-cta-bg: #E0F2FE;
-    --preview-card-border:#E2E8F0;
+    --preview-card-border: #E2E8F0;
 }
 
 body {
@@ -200,6 +200,8 @@ textarea:focus {
 
 .preview-content {
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .preview-links {
@@ -209,7 +211,8 @@ textarea:focus {
 
 .preview-heading-font,
 #preview-hero-heading,
-.preview-card-heading {
+.preview-card-heading,
+#cta-heading {
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -218,12 +221,15 @@ textarea:focus {
 .preview-subtext-font,
 #preview-hero-subtext,
 #preview-theme-btn,
-.preview-card-subtext {
+.preview-card-subtext,
+#preview-save-theme-btn {
     font-size: 13px;
     letter-spacing: 1px;
 }
 
 .preview-hero {
+
+    flex: 1;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -233,7 +239,8 @@ textarea:focus {
     background-image: linear-gradient(to right, var(--preview-hero-gradient-start), var(--preview-hero-gradient-end));
 }
 
-#preview-theme-btn {
+#preview-theme-btn,
+#preview-save-theme-btn {
     padding: 4px 8px;
     border-radius: 8px;
     color: var(--preview-card-bg);
@@ -241,6 +248,7 @@ textarea:focus {
 }
 
 .preview-feature-cards {
+    height: 180px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     background-color: var(--preview-cards-section-bg);
@@ -248,14 +256,29 @@ textarea:focus {
     gap: 20px;
 }
 
-.preview-card{
-   background-color: var(--preview-card-bg); 
-   padding: 10px;
-   margin: 5px;
-   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0);
-   border-radius: 16px;
-   border: 1px solid var(--preview-card-border);
-   text-align: center;
+.preview-card {
+    background-color: var(--preview-card-bg);
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0);
+    border-radius: 16px;
+    border: 1px solid var(--preview-card-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.preview-cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--preview-cta-bg);
+    gap: 20px;
+    padding: 20px;
 }
 
 .preview-footer {
