@@ -20,13 +20,13 @@
     --border-textarea: #e5e7eb;
     --about: #1E293B;
     --about-text: #475569;
-    --preview-background:#FFFFFF;
-    --preview-hero-gradient-start:#E3F2FD;
-    --preview-hero-gradient-end:#90CAF9;
-    --preview-heading:#1E293B;
+    --preview-background: #FFFFFF;
+    --preview-hero-gradient-start: #E3F2FD;
+    --preview-hero-gradient-end: #90CAF9;
+    --preview-heading: #1E293B;
     --preview-subtext: #64748B;
     --preview-primary-btn: #3B82F6;
-    --preview-card-bg:#FFFFFF;
+    --preview-card-bg: #FFFFFF;
     --preview-footer-bg: #F2F2F2;
     --preview-cards-section-bg: #F8FAFC;
     --preview-cta-bg: #E0F2FE;
@@ -184,9 +184,9 @@ textarea:focus {
     box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0);
 }
 
-.preview-header{
+.preview-header {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     padding: 5px;
     padding-left: 20px;
@@ -197,27 +197,44 @@ textarea:focus {
     color: var(--preview-heading);
 }
 
-.preview-content{
+.preview-content {
     flex: 1;
 }
 
-.preview-links{
+.preview-links {
     display: flex;
     gap: 30px;
 }
 
-.preview-heading-font{
+.preview-heading-font,#preview-hero-heading {
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 1px;
 }
 
-.preview-subtext-font{
+.preview-subtext-font,#preview-hero-subtext,#preview-theme-btn {
     font-size: 13px;
     letter-spacing: 1px;
 }
 
-.preview-footer{
+.preview-hero {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-image: linear-gradient(to right, var(--preview-hero-gradient-start), var(--preview-hero-gradient-end));
+}
+
+#preview-theme-btn{
+   padding: 4px 8px;
+   border-radius: 8px;
+   color: var(--preview-card-bg);
+   background-color: var(--preview-primary-btn);
+}
+
+.preview-footer {
     text-align: center;
     font-size: 10px;
     background-color: var(--preview-footer-bg);
@@ -225,8 +242,9 @@ textarea:focus {
     height: 20px;
     padding-top: 5px;
     border-bottom-left-radius: 20px;
-    border-bottom-right-radius:20px;
+    border-bottom-right-radius: 20px;
 }
+
 .about {
     background-color: var(--hero-bg);
     display: flex;
@@ -242,7 +260,7 @@ textarea:focus {
     font-weight: 600;
     letter-spacing: 1px;
     color: var(--about);
-    
+
 }
 
 #about-sub-heading {
