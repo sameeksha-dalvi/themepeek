@@ -15,3 +15,14 @@ copyPromptBtn.addEventListener('click', function () {
     }, 2000);
 
 });
+
+
+const previewThemeBtn = document.querySelector('#load-theme-btn');
+
+previewThemeBtn.addEventListener('click',function(){
+
+    const themeText = document.querySelector('#theme-txt');
+
+
+    console.log(themeText.value);
+});
