@@ -241,7 +241,7 @@ textarea:focus {
 
 #preview-theme-btn,
 #preview-save-theme-btn {
-    padding: 4px 8px;
+    padding: 5px 10px;
     border-radius: 8px;
     color: var(--preview-card-bg);
     background-color: var(--preview-primary-btn);
@@ -268,7 +268,7 @@ textarea:focus {
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .preview-cta {
@@ -357,7 +357,7 @@ footer a:hover {
         gap: 40px;
     }
 
-    #logo-txt {
+    #logo-txt,#about-sub-heading {
         font-size: 18px;
     }
 
@@ -369,7 +369,6 @@ footer a:hover {
 
     #sub-heading,
     #about-heading,
-    #about-sub-heading,
     #sub-text {
         font-size: 20px;
         text-align: center;
@@ -392,5 +391,42 @@ footer a:hover {
         font-size: 14px;
     }
 
+    #preview-screen {
+        width: 330px;
+        height: 720px;
+        overflow-y: auto;
+    }
+
+    .preview-header{
+        padding-bottom: 10px;
+    }
+
+    .preview-hero {
+        text-align: center;
+        gap: 30px;
+    }
+
+    #preview-theme-btn {
+        margin-bottom: 10px;
+    }
+
+    .preview-feature-cards {
+        height: 500px;
+    }
+
+    .preview-heading-font,
+    #preview-hero-heading,
+    .preview-card-heading,
+    #cta-heading {
+        font-size: 14px;
+    }
+
+    .preview-subtext-font,
+    #preview-hero-subtext,
+    #preview-theme-btn,
+    .preview-card-subtext,
+    #preview-save-theme-btn {
+        font-size: 11px;
+    }
 
 }
