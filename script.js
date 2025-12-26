@@ -18,16 +18,35 @@ copyPromptBtn.addEventListener('click', function () {
 
 
 const previewThemeBtn = document.querySelector('#load-theme-btn');
+const themeData = document.querySelector('#theme-txt');
+
+function showError() {
+    themeData.classList.add('error-shake');
+
+    const originalPlaceholder = themeData.placeholder;
+    themeData.value = '';
+    themeData.placeholder = "Error: Paste theme in correct format!";
+
+    setTimeout(() => {
+        themeData.classList.remove('error-shake');
+        themeData.placeholder = originalPlaceholder;
+    }, 1000);
+}
+
 
 previewThemeBtn.addEventListener('click', function () {
 
     let currentState = previewThemeBtn.textContent.toLowerCase();
 
     console.log(currentState);
-    const themeData = document.querySelector('#theme-txt');
+
 
     if (currentState == 'preview theme') {
-
+        const themeText = themeData.value.trim();
+        if (!themeText) {
+            showError();
+            return;
+        }
         const requiredKeys = [
             'background',
             'hero gradient start',
@@ -43,53 +62,65 @@ previewThemeBtn.addEventListener('click', function () {
         ];
 
 
-        const themeText = themeData.value.trim();
+
         const eachLine = themeText.split('\n');
 
         const trimEachLine = eachLine.map(function (line) {
             return line.trim();
         });
 
-        let errors = [];
+        let foundKeys = [];
+        let hexRegex = /^#([0-9A-Fa-f]{6})$/;
 
-        for (let i = 0; i < trimEachLine.length; i++) {
-            let line = trimEachLine[i];
+        for (let i = 0; i < eachLine.length; i++) {
+            let line = eachLine[i].trim();
+
+            if (line === '') {
+                continue;
+            }
 
             if (line.indexOf(':') === -1) {
-                errors.push('Invalid line format: "' + line + '"');
-                continue;
+                showError();
+                return;
             }
 
             let parts = line.split(':');
             let key = parts[0].trim().toLowerCase();
             let value = parts[1].trim();
 
-            let keyFound = false;
-
+            let keyIsValid = false;
             for (let j = 0; j < requiredKeys.length; j++) {
                 if (requiredKeys[j] === key) {
-                    keyFound = true;
+                    keyIsValid = true;
                     break;
                 }
             }
 
-            if (!keyFound) {
-                errors.push('Unexpected key: "' + parts[0] + '"');
+            if (!keyIsValid) {
+                showError();
+                return;
             }
 
-            let hexRegex = /^#([0-9A-Fa-f]{6})$/;
+            for (let k = 0; k < foundKeys.length; k++) {
+                if (foundKeys[k] === key) {
+                    showError();
+                    return;
+                }
+            }
 
             if (!hexRegex.test(value)) {
-                errors.push('Invalid color value for "' + parts[0] + '"');
+                showError();
+                return;
             }
+
+            foundKeys.push(key);
         }
 
-        if (errors.length > 0) {
-            alert(errors.join('\n'));
+        if (foundKeys.length !== requiredKeys.length) {
+            showError();
             return;
         }
-
-        //alert('Theme format is valid!');
+    
 
         previewThemeBtn.textContent = "Reset";
 
