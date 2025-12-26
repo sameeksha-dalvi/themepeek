@@ -31,6 +31,7 @@
     --preview-cards-section-bg: #F8FAFC;
     --preview-cta-bg: #E0F2FE;
     --preview-card-border: #E2E8F0;
+    --preview-footer-text:#1E293B;
 }
 
 body {
@@ -285,7 +286,7 @@ textarea:focus {
     text-align: center;
     font-size: 10px;
     background-color: var(--preview-footer-bg);
-    color: var(--preview-heading);
+    color: var(--preview-footer-text);
     height: 20px;
     padding-top: 5px;
     border-bottom-left-radius: 20px;
